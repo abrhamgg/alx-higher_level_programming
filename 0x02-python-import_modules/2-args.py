@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-def print_arg(argv):
+def main(argv):
     n = len(argv) - 1
     if n == 0:
         print("{:d} argument.".format(n))
@@ -17,4 +17,4 @@ def print_arg(argv):
 
 if __name__ == "__main__":
     from sys import argv
-    print_arg(argv)
+    main(argv)
