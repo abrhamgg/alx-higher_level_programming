@@ -4,7 +4,6 @@ def no_c(string):
         return
     n = len(string)
     myStr = ""
-    tr = "hello"    
     for i in range(0, n):
         c = string[i]
         if c == 'C' or c == 'c':
