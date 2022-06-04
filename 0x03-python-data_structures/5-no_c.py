@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 def no_c(string):
+    if string is None:
+        return
     n = len(string)
     myStr = ""
     tr = "hello"    
@@ -9,5 +11,4 @@ def no_c(string):
             continue
         myStr = myStr + c
     string = myStr
-
-    return string
+    return myStr
