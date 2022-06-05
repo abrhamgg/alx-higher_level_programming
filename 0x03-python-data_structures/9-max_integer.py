@@ -1,19 +1,19 @@
 #!/usr/bin/python3
-def max_integer(list=[]):
-    if list is None:
+def max_integer(my_list=[]):
+    if my_list is None:
         return None
-    n = len(list)
+    n = len(my_list)
     if n == 1:
-        return list[0]
+        return my_list[0]
     if n == 2:
-        if list[0] > list[1]:
-            return list[0]
+        if my_list[0] > my_list[1]:
+            return my_list[0]
         else:
-            return list[1]
-    if list[0] > list[1]:
-        maxx = list[0]
-    maxx = list[1]
+            return my_list[1]
+    if my_list[0] > my_list[1]:
+        maxx = my_list[0]
+    maxx = my_list[1]
     for i in range(0, n):
-        if list[i] > maxx:
-            maxx = list[i]
+        if my_list[i] > maxx:
+            maxx = my_list[i]
     return maxx
