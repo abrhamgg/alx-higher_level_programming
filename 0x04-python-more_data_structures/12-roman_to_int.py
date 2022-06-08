@@ -1,2 +1,10 @@
 #!/usr/bin/python3
-def roman_to_int(roman_string)
+def roman_to_int(roman_string):
+    struct = {'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000}
+    num = 0
+    n = len(roman_string)
+    for c in range(0, n):
+        for key, values in struct.items():
+            if roman_string[c] == key:
+                num += values
+    return num
