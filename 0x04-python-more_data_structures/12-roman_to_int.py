@@ -1,14 +1,20 @@
 #!/usr/bin/python3
+
+
 def roman_to_int(roman_string):
-    if roman_string is None:
+    if not roman_string or type(roman_string) != str:
         return 0
-    if type(roman_string) != str:
-        return 0
-    struct = {'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000}
+    my_dict = {'I': 1, 'V': 5, 'X': 10, 'L': 50,
+               'C': 100, 'D': 500, 'M': 1000}
     num = 0
-    n = len(roman_string)
-    for c in range(0, n):
-        for key, values in struct.items():
-            if roman_string[c] == key:
-                num += values
-    return num
+
+    for i in range(len(roman_string)):
+        if my_dict.get(roman_string[i], 0) == 0:
+            return 0
+
+        if (i != (len(roman_string) - 1) and
+            my_dict[roman_string[i]] < my_dict[roman_string[i + 1]]):
+            num += my_dict[roman_string[i]] * -1
+        else:
+            num += my_dict[roman_string[i]]
+    return (num)
