@@ -10,7 +10,7 @@ class Rectangle:
     """
     def __init__(self, width=0, height=0):
         """Initialize a triangle.
-        
+
         Args:
             width: width of triangle
             height: height of triangle
@@ -45,4 +45,4 @@ class Rectangle:
             raise TypeError("height must be an integer")
         if value < 0:
             raise ValueError("height must be >= 0")
-        self.__heigt = value
+        self.__height = value
