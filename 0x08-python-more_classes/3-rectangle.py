@@ -50,7 +50,7 @@ class Rectangle:
             return 0
         return 2 * (self.__width + self.__height)
 
-    def __repr__(self):
+    def __str__(self):
         """return area printed in hash"""
         _str = ""
         for i in range(self.__height):
