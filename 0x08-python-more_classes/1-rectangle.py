@@ -9,11 +9,17 @@ class Rectangle:
     rectangle class
     """
     def __init__(self, width=0, height=0):
+        """Initialize a triangle.
+        
+        Args:
+            width: width of triangle
+            height: height of triangle
+        """
         self.__width = width
         self.__height = height
 
     @property
-    def width(self, value):
+    def width(self):
         """
         get rectangle width
         """
@@ -28,7 +34,7 @@ class Rectangle:
         self.__width = value
 
     @property
-    def height(self, value):
+    def height(self):
         """rectangle height
         """
         return self.__width
