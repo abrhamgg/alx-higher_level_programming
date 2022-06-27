@@ -10,6 +10,15 @@ class Rectangle:
     """
 
     def __init__(self, width=0, height=0):
+        """
+        Constructs all the necessary attributes for rectangle
+        Parameters
+        ----------
+        width : int
+            the width of rectangle object
+        height: int
+            the height of rectangle object
+        """
         self.__height = height
         self.__width = width
 
@@ -27,7 +36,12 @@ class Rectangle:
 
     @width.setter
     def width(self, value):
-        """setter method for width
+        """
+        setter method for width
+
+        Args:
+            value : int
+            the new width of rectangle object
         """
         self.__width = value
         if not isinstance(value, int):
@@ -37,8 +51,13 @@ class Rectangle:
 
     @height.setter
     def height(self, value):
-        """setter method for
-        height"""
+        """
+        setter method for height
+
+        Args:
+            value : int
+            the height of rectangle object
+        """
         self.__height = value
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
