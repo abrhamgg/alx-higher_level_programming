@@ -76,12 +76,12 @@ class Rectangle:
         if rect_1.area() >= rect_2.area():
             return (rect_1)
         return (rect_2)
-    
+
     @classmethod
     def square(cls, size=0):
         newRec = Rectangle(size, size)
         return newRec
-        
+
     def __str__(self):
         """Return the printable representation of the Rectangle.
 
