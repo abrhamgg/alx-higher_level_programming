@@ -14,6 +14,29 @@ Checking for class doc string
 	>>> len(c) > 1
 	True
 
+Checking value with correct input
+	>>> t1 = BaseGeometry()
+	>>> t1.integer_validator("my_int", 12)
+	
+Checking value with empty string
+	>>> t2 = BaseGeometry()
+	>>> t2.integer_validator("my int", "")
+	Traceback (most recent call last):
+	...
+	TypeError: my int must be an integer
 
+Checking value with float value
+	>>> t3 = BaseGeometry()
+	>>> t3.integer_validator("my int", 9.8)
+	Traceback (most recent call last):
+	...
+	TypeError: my int must be an integer
+
+Checking value with negative number
+	>>> t4 = BaseGeometry()
+	>>> t4.integer_validator("my_int", -8)
+	Traceback (most recent call last):
+	...
+	ValueError: my_int must be greater than 0
 
 
