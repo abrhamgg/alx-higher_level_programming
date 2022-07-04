@@ -1,0 +1,33 @@
+1-my_list module
+===============
+
+Importing the class from the module
+    >>> MyList = __import__('1-my_list').MyList
+
+Checking for module docstring
+    >>> m = __import__('1-my_list').__doc__
+    >>> len(m) > 1
+    True
+
+Checking for class docstring
+    >>> c = __import__("1-my_list").MyList.__doc__
+    >>> len(c) > 1
+    True
+
+Checking for single element
+    >>> my_list = MyList()
+    >>> my_list.append(1)
+    >>> my_list.print_sorted()
+    [1]
+
+Appending NULL
+>>> new = MyList()
+>>> new.append(NULL)
+Traceback (most recent call last):
+    ...
+NameError: name 'NULL' is not defined
+
+Checking an Empty list
+    >>> obj = MyList()
+    >>> print(obj)
+    []
