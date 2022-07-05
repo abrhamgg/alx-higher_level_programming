@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ function that write a string to text file"""
 
+
 def write_file(filename="", text=""):
     """
     function that writes string to a text file and returns the number
