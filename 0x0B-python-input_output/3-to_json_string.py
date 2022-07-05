@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+""" importing json lib"""
 import json
 """
 To JSON string
