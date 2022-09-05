@@ -1,0 +1,6 @@
+#!/usr/bin/node
+const myArgs = process.argv;
+const len = myArgs.length;
+for (let i = 2; i < len; i++){
+	console.log(myArgs[i]);
+}
