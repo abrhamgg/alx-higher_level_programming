@@ -10,5 +10,5 @@ if __name__ == "__main__":
                          passwd=sys.argv[2], db=sys.argv[3])
     r = db.cursor()
     r.execute("SELECT * FROM states WHERE name"
-              "= '{}' ORDER BY `id` ASC".format(sys.argv[4]))
+              "LIKE '{:s}' ORDER BY `id` ASC".format(sys.argv[4]))
     [print(state) for state in r.fetchall()]
