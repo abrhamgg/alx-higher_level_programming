@@ -14,6 +14,6 @@ if __name__ == "__main__":
         checked_sql = sys.argv[4].split(';')
     else:
         checked_sql = sys.argv[4]
-    r.execute("SELECT * FROM states WHERE name LIKE"
-              "'{}' ORDER BY `id` ASC".format(checked_sql[0]))
-    [print(state) for state in r.fetchall() if state[1] in checked_sql[0]]
+        r.execute("SELECT * FROM states WHERE name LIKE"
+                  "'{}' ORDER BY `id` ASC".format(sys.argv[4]))
+    [print(state) for state in r.fetchall() if state[1] == sys.argv[4]]
