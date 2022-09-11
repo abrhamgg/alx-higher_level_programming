@@ -10,13 +10,10 @@ if __name__ == "__main__":
                          passwd=sys.argv[2], db=sys.argv[3])
     r = db.cursor()
     checked_sql = ''
-    if sys.argv[4]:
-        if ';' in sys.argv[4]:
-            new = sys.argv[4].split(';')
-            checked_sql = new[0].strip('\"')
-        else:
-            checked_sql = sys.argv[4]
-        print(checked_sql)
+    if sys.argv[4] and ';' in sys.argv[4]:
+        checked_sql = sys.argv[4].split(';')
+    else:
+        checked_sql = sys.argv[4]
     r.execute("SELECT * FROM states WHERE name LIKE"
-              "'{}' ORDER BY `id` ASC".format(checked_sql))
-    [print(state) for state in r.fetchall() if state[1] in checked_sql]
+              "'{}' ORDER BY `id` ASC".format(checked_sql[0]))
+    [print(state) for state in r.fetchall() if state[1] in checked_sql[0]]
