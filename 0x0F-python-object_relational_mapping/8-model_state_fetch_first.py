@@ -14,5 +14,8 @@ if __name__ == '__main__':
                            .format(sys.argv[1], sys.argv[2], sys.argv[3]))
     Session = sessionmaker(engine)
     session = Session()
-    first = session.query(State).first()
-    print('{}: {}'.format(first.id, first.name))
+    first = session.query(State).order_by(State.id).first()
+    if first is None:
+        print()
+    else:
+        print('{}: {}'.format(first.id, first.name))
