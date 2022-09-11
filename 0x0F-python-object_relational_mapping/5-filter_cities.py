@@ -15,7 +15,7 @@ if __name__ == "__main__":
               'ORDER BY cities.id ASC;'.format(sys.argv[4]))
     tup = r.fetchall()
     if len(tup) == 0:
-        pass
+        print()
     else:
         for i in range(len(tup)):
             print(tup[i][0], end="")
