@@ -1,3 +1,3 @@
 #!/bin/bash
-#Bash script that takes URL as argument  sends header Variable
+# curl sends GET req to URL, displays response body
 curl -sH "X-School-User-Id: 98" "$1"
