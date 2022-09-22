@@ -1,3 +1,3 @@
 #!/bin/bash
-#script that lists available HTTP methdos in the server
-curl -sI $1 | grep -i Allow | awk "{print $2}"
+# curl to display all HTTP methods the server accepts
+curl -sI "$1" | grep "Allow" | cut -d " " -f 2-
