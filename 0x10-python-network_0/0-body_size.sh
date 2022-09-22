@@ -1,2 +1,3 @@
 #!/bin/bash
-curl -sI $1 | grep -i Content-Length | awk '{print $2}'
+#script tht shows the size of HTTP response body
+curl -s -I $1 | grep -i Content-Length | awk '{print $2}'
