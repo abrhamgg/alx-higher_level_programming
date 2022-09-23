@@ -14,4 +14,4 @@ if __name__ == '__main__':
     res = r.json()
     new = res[:10]
     for i in new:
-        print("{} {}".format(i.get("sha"), i['commit']['author']['name']))
+        print("{}: {}".format(i.get("sha"), i['commit']['author']['name'],))
