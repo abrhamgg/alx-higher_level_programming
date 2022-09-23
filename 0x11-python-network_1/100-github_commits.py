@@ -9,8 +9,7 @@ import sys
 
 if __name__ == '__main__':
     url = f"https://api.github.com/repos/{sys.argv[1]}/{sys.argv[2]}/commits"
-    value = "Accept: application/vnd.github+json"
-    r = requests.get(url, params=value)
+    r = requests.get(url)
     res = r.json()
     new = res[:10]
     for i in new:
